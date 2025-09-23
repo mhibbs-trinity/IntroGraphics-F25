@@ -59,7 +59,17 @@ void draw() {
   strokeWeight(3);
   
   if(mode == Mode.KOCH) {
-    
+    translate(0,height/2);
+    for(int i=0; i<koch[level].length(); i++) {
+      char c = koch[level].charAt(i);
+      float len = width / pow(3,level);
+      if(c == 'F') {
+        line(0,0, len,0);
+        translate(len,0);
+      }
+      if(c == '+') rotate(PI/3);
+      if(c == '-') rotate(-PI/3);
+    }
   }
   
   if(mode == Mode.HILBERT) {
