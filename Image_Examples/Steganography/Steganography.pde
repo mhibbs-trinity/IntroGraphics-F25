@@ -23,7 +23,7 @@ int offset = 32;
 
 void setup() {
   copy = stegoCreate(img, "HELLO THERE!!! TRINITY CSCI IS THE BEST!!!");
-  //println(stegoDecode(copy));
+  println(stegoDecode(copy));
 }
 
 void draw() {
