@@ -1,5 +1,4 @@
-// Minimal Processing sketch
-// Window size: 800x600
+ParticleSystem ps;
 
 void settings() {
   size(800, 600);
@@ -7,14 +6,26 @@ void settings() {
 
 void setup() {
   background(0);
-  stroke(255);
-  fill(255);
+  ps = new ParticleSystem(new PVector(width / 2, height / 4));
 }
 
 void draw() {
-  // Simple moving ellipse to show animation loop
   background(0);
-  float x = width * 0.5 + 200 * sin(frameCount * 0.02);
-  float y = height * 0.5 + 100 * cos(frameCount * 0.015);
-  ellipse(x, y, 48, 48);
+
+  // Add a new particle each frame
+  ps.addParticle();
+
+  // Calculate wind based on mouseX
+  float windStrength = map(mouseX, 0, width, -0.1, 0.1);
+  PVector wind = new PVector(windStrength, 0);
+  PVector gravity = new PVector(0,0.05);
+  ps.applyForce(wind);
+  ps.applyForce(gravity);
+  
+  // Update and display all particles
+  ps.run();
+  
+  for(Particle p : ps.particles) {
+    p.acceleration = new PVector(0,0);
+  }
 }
