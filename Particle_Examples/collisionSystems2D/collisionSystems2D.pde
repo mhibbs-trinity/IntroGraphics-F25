@@ -9,7 +9,7 @@ void setup() {
   
   bigPart = new Particle(new PVector(width/2,height/2), 100);
   bigPart.mass = 20;
-  //cs.parts.add(bigPart);
+  cs.parts.add(bigPart);
   
   float rad = 5;
   while(cs.parts.size() < 200) {
@@ -50,15 +50,15 @@ void draw() {
     w.display();
   }
   */
-  cs.run();
+  //cs.run();
   //cs.runWithIntersections();
   //cs.runWithWallIntersections(walls);
   //cs.runShowingParticleCollisions();
   //cs.runShowingWallCollisions(walls);
   //cs.runWithWallCollisions(walls);
-  //cs.runWithParticleCollisions();
+  cs.runWithParticleCollisions();
   //cs.runWithParticleAndWallCollisions(walls);
-  //trail.add(bigPart.loc.copy());
+  trail.add(bigPart.loc.copy());
   
   stroke(0,255,0);
   noFill();
