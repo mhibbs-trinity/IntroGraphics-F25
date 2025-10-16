@@ -24,7 +24,7 @@ void draw() {
   fill(128);
   
   if(mode == Mode.SPHERES) {
-    sphereDetail(50);
+    sphereDetail(150);
     float shine=1;
     for(float x=200; x<=600; x+=200) {
       for(float y=200; y<=600; y+=200) {
