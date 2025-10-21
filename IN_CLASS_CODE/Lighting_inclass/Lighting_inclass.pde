@@ -36,8 +36,8 @@ void draw() {
   fill(255);
   noStroke();
 
-  lights();
-  //pointLight(255,0,0, mouseX, mouseY, 200);
+  //lights();
+  pointLight(255,255,255, mouseX, mouseY, 200);
   stroke(255);
   strokeWeight(10);
   point(mouseX, mouseY, 200);

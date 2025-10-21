@@ -17,18 +17,18 @@ class TextureSphere {
     for(float u=0; u<2*PI; u+=uStep) {
       for(float v=-PI/2; v<PI/2; v+=vStep) {
       //for(float v=-200; v<200; v+=vStep) {  
-        /*
+        
         vertex(xpos(u,v), ypos(u,v), zpos(u,v), map(u, 0,2*PI, img.width,0), map(v, -PI/2,PI/2, 0,img.height));
         vertex(xpos(u+uStep,v),ypos(u+uStep,v),zpos(u+uStep,v), map(u+uStep, 0,2*PI, img.width,0), map(v, -PI/2,PI/2, 0,img.height));
         vertex(xpos(u+uStep,v+vStep),ypos(u+uStep,v+vStep),zpos(u+uStep,v+vStep), map(u+uStep, 0,2*PI, img.width,0), map(v+vStep, -PI/2,PI/2, 0,img.height));
         vertex(xpos(u,v+vStep),ypos(u,v+vStep),zpos(u,v+vStep), map(u, 0,2*PI, img.width,0), map(v+vStep, -PI/2,PI/2, 0,img.height));
-        */
         
+        /*
         createVertex(u,v);
         createVertex(u+uStep,v);
         createVertex(u+uStep,v+vStep);
         createVertex(u,v+vStep);
-        
+        */
       }
     }
     endShape();
