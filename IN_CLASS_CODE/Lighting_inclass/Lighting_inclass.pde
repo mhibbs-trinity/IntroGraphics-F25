@@ -37,6 +37,7 @@ void draw() {
   noStroke();
 
   //lights();
+  lightSpecular(255,0,255);
   pointLight(255,255,255, mouseX, mouseY, 200);
   stroke(255);
   strokeWeight(10);
@@ -46,6 +47,9 @@ void draw() {
   pushMatrix();
   translate(150,150);
   fill(100,255,0);
+  emissive(5);
+  shininess(100.0);
+  //specular(255,0,255);
   sphere(75);
   popMatrix();
 

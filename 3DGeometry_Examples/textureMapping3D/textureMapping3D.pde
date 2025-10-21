@@ -4,9 +4,9 @@ PImage img;
 
 void setup() {
   size(500,500,P3D);
-  //img = loadImage("earth_lights_lrg.jpg");
+  img = loadImage("earth_lights_lrg.jpg");
   //img = loadImage("glass copy.png");
-  img = loadImage("jupiter.jpg");
+  //img = loadImage("jupiter.jpg");
   //img = loadImage("gray.jpg");
   //img = loadImage("grid.png");
   ts = new TextureSphere(180, 80, img);
