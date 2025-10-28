@@ -53,9 +53,7 @@ class IcoSphere {
     PVector v = new PVector(a,b,c);
     v.normalize();
     mesh.verts.add(v);
-    mesh.norms.add(v.get());
-    //PVector uv = new PVector(asin(v.x)/PI + 0.5, asin(v.y)/PI + 0.5, 0);
-    //mesh.uvs.add(uv);
+    mesh.norms.add(v.copy());
   }
   
   private void addTriangle(int a, int b, int c) {
@@ -64,14 +62,7 @@ class IcoSphere {
   }
   
   void createSphericalUVs() {
-    mesh.uvs = new ArrayList<PVector>();
-    for(PVector pt : mesh.verts) {
-      float v = asin(pt.z);
-      float u = atan2( pt.x, pt.y );
-      
-      PVector uv = new PVector(map(u,-PI,PI,1,0), (v + HALF_PI) / PI, 0);
-      mesh.uvs.add(uv);
-    }
+
   }
  
   void subdivideAllTris() {
@@ -79,50 +70,6 @@ class IcoSphere {
     ArrayList<PVector> newNorms = new ArrayList<PVector>();
     ArrayList<int[]> newTris = new ArrayList<int[]>();
     
-    int ctr = 0;
-    for(int[] tri : mesh.tris) {
-       PVector[] p = new PVector [6];
-       p[0] = mesh.verts.get(tri[0]);
-       p[1] = mesh.verts.get(tri[1]);
-       p[2] = mesh.verts.get(tri[2]);
-       
-       p[3] = PVector.add(p[0],p[1]);
-       p[3].normalize();
-       p[4] = PVector.add(p[1],p[2]);
-       p[4].normalize();
-       p[5] = PVector.add(p[2],p[0]);
-       p[5].normalize();
-       
-       for(int i=0; i<6; i++) {
-         newVerts.add(p[i]);
-         newNorms.add(p[i]);
-       }
-       int[] t0 = new int[3];
-       t0[0] = ctr+0;
-       t0[1] = ctr+3;
-       t0[2] = ctr+5;
-       newTris.add(t0);
-       
-       int[] t1 = new int[3];
-       t1[0] = ctr+3;
-       t1[1] = ctr+1;
-       t1[2] = ctr+4;
-       newTris.add(t1);
-       
-       int[] t2 = new int[3];
-       t2[0] = ctr+4;
-       t2[1] = ctr+2;
-       t2[2] = ctr+5;
-       newTris.add(t2);
-       
-       int[] t3 = new int[3];
-       t3[0] = ctr+3;
-       t3[1] = ctr+4;
-       t3[2] = ctr+5;
-       newTris.add(t3);
-       
-       ctr += 6;
-    }
     
     mesh.verts = newVerts;
     mesh.norms = newNorms;
