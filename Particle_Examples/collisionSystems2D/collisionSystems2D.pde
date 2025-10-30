@@ -48,16 +48,16 @@ void draw() {
   /*
   for(FixedWall w : walls) {
     w.display();
-  }
-  */
+  }*/
+  
   //cs.run();
   //cs.runWithIntersections();
   //cs.runWithWallIntersections(walls);
   //cs.runShowingParticleCollisions();
   //cs.runShowingWallCollisions(walls);
   //cs.runWithWallCollisions(walls);
-  //cs.runWithParticleCollisions();
-  cs.runWithParticleAndWallCollisions(walls);
+  cs.runWithParticleCollisions();
+  //cs.runWithParticleAndWallCollisions(walls);
   trail.add(bigPart.loc.copy());
   
   stroke(0,255,0);

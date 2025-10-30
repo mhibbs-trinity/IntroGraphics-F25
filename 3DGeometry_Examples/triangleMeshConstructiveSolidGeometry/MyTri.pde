@@ -1,7 +1,7 @@
 class MyTri {
   PVector a,b,c;
   PVector n;
-  float epsilon = 0.05;
+  float epsilon = 0.01;
  
   MyTri(PVector _a, PVector _b, PVector _c) {
     a = _a;

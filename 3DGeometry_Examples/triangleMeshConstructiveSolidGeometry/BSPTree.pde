@@ -1,5 +1,5 @@
 class BSPTree {
-  float eps = 0.0005;
+  float eps = 0.01;
   
   ArrayList<MyTri> lostTriangles = new ArrayList<MyTri>();
   
