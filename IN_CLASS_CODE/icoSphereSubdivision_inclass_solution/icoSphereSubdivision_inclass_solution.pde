@@ -8,11 +8,11 @@ void setup() {
   is = new IcoSphere();
   
   //img = loadImage("jupiter.jpg");
-  img = loadImage("earth.jpg");
+  //img = loadImage("earth.jpg");
   //img = loadImage("grid.png");
   //img = loadImage("gradient.png");
   //img = loadImage("city.png");
-  //img = loadImage("testPattern.png");
+  img = loadImage("testPattern.png");
   
   translate(width/2,height/2);  
   pushMatrix();

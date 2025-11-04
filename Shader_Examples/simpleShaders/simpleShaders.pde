@@ -7,7 +7,7 @@ PShader shade;
      3 = LIGHT per-pixel Phong spcular shader
      4 = LIGHT per-pixel diffuse toon shader
      5 = LIGHT per-pixel specular toon shader */
-int mode = 0;
+int mode = 5;
 
 void setup() {
   size(500,500,P3D);

@@ -8,7 +8,7 @@ float rot = 0;
      1 = TEXLIGHT shader performing per-pixel diffuse/specular lighting
      2 = TEXLIGHT shader with black/white filter
      3 = TEXLIGHT shader with pixelation effect */
-int mode = 0;
+int mode = 4;
 
 void setup() {
   size(500,500,P3D);

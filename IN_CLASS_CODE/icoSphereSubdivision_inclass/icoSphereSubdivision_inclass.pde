@@ -77,9 +77,9 @@ void draw() {
     strokeWeight(1.0/50);
   }  
   
-  //scale(phi*1.18);
-  //if(keyPressed && (key == 't' || key == 'T')) is.display(img);
-  //else is.display();
+  scale(phi*1.18);
+  if(keyPressed && (key == 't' || key == 'T')) is.display(img);
+  else is.display();
   
   
   popMatrix();
