@@ -5,15 +5,17 @@ void setup() {
   noStroke();
   fill(255);
   
-  shade = loadShader("colorfrag.glsl", "colorvert.glsl");
+  shade = loadShader("frag.glsl","vert.glsl");
 }
 
 void draw() {
   shader(shade);
   background(0);
   
+  pointLight(255,255,255, mouseX,mouseY,400);
+  
   translate(width/2, height/2);
   sphereDetail(8);
-  fill(100,150,25);
+  fill(200,150,25);
   sphere(200);
 }
