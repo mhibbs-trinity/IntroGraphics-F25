@@ -1,4 +1,4 @@
-PShader shade;
+  PShader shade;
 
 void setup() {
   size(500,500,P3D);
