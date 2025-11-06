@@ -7,8 +7,8 @@ float rot = 0;
 
 void setup() {
   size(500,500,P3D);
-  //img = loadImage("tree1.png");
-  img = loadImage("cloud1.png");
+  img = loadImage("tree1.png");
+  //img = loadImage("cloud1.png");
   //img = loadImage("billboard.jpg");
   
   pts = new ArrayList<PVector>();

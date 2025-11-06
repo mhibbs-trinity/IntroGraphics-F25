@@ -13,6 +13,6 @@ void main() {
   if(texCol.w < 0.5) discard;
 
   gl_FragColor = vec4(texCol.x,texCol.y,texCol.z,0.1);
-  vec4 dpos = projection * eyePos;
+  //vec4 dpos = projection * eyePos;
   //gl_FragDepth = (dpos.z / dpos.w + 1.0) / 2.0;
 }
