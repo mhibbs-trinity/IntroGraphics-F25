@@ -5,7 +5,7 @@ PImage htTex;
 PImage normTex;
 float rot;
 
-int mode = 0; //Set to 1 for displacement mapping; to 0 for bump mapping
+int mode = 1; //Set to 1 for displacement mapping; to 0 for bump mapping
 
 void setup() {
   size(500,500, P3D);
