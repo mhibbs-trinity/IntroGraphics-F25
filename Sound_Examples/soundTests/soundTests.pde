@@ -18,9 +18,9 @@ void setup()
 {
   size(200, 200, P3D);
   minim = new Minim(this);
-  //song = minim.loadFile("derezzed.mp3", 1024);
+  song = minim.loadFile("derezzed.mp3", 1024);
   //song = minim.loadFile("fall.mp3", 1024);
-  song = minim.loadFile("taphaniang.mp3", 1024);
+  //song = minim.loadFile("taphaniang.mp3", 1024);
   song.play();
   
   // a beat detection object song SOUND_ENERGY mode
