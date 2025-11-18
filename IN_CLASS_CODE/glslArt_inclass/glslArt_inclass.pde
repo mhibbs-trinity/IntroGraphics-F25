@@ -12,7 +12,7 @@ void setup() {
 }
 
 void draw() {
-  shade.set("time", millis() / 1000.0);
+  shade.set("time", millis() / 500.0);
   
   background(0);
   beginShape(QUADS);
