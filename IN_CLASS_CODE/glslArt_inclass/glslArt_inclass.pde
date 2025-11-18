@@ -1,0 +1,25 @@
+PShader shade;
+PImage img;
+
+
+void setup() {
+  //This is doing something very dumb just to have a dummy picture
+  img = createImage(1,1,RGB);
+  
+  size(800,800,P3D); 
+  shade = loadShader("frag.glsl","vert.glsl");
+  shader(shade);
+}
+
+void draw() {
+  shade.set("time", millis() / 1000.0);
+  
+  background(0);
+  beginShape(QUADS);
+  texture(img);
+  vertex(0,         0,0, 0,0);
+  vertex(width,     0,0, 1,0);
+  vertex(width,height,0, 1,1);
+  vertex(0,    height,0, 0,1);
+  endShape();
+}

@@ -17,7 +17,7 @@ void main() {
   z += 0.07;
 
   float d = length(p);
-  uv += p / d * (sin(z) + 1.0) * abs(sin(d * 9.0 - z * 2.0));
+  uv += p / d * (sin(z) + 1.0);// * abs(sin(d * 9.0 - z * 2.0));
   c[0] = 0.01 / length(mod(uv, 1.0) - 0.5);
 
   gl_FragColor = vec4(c / d, time);
